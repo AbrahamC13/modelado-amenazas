@@ -603,6 +603,62 @@
                 "sourceMarker": {
                   "name": ""
                 },
+                "strokeDasharray": "4 3"
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Páginas",
+              "description": "Páginas web leídas desde el disco.",
+              "outOfScope": true,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Páginas"
+            ],
+            "id": "9a5e69b1-6b2e-4289-8605-83dae14bf30d",
+            "source": {
+              "cell": "351b30a2-e9dd-49e2-80d9-9486a754711c",
+              "port": "043327e6-4388-4c12-b094-0155639d7b18"
+            },
+            "target": {
+              "cell": "b9c1b9b0-c699-4e1e-b942-e9ff38bb2934",
+              "port": "ea7220b4-3336-456b-a20a-680c98dd005d"
+            },
+            "vertices": [
+              {
+                "x": 330,
+                "y": 420
+              },
+              {
+                "x": 350,
+                "y": 390
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
                 "strokeDasharray": null
               }
             },
@@ -613,7 +669,7 @@
             "data": {
               "type": "tm.Flow",
               "name": "Resultados\nWeb App Query",
-              "description": "",
+              "description": "Datos recuperados desde la base de\ndatos.",
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
@@ -622,8 +678,27 @@
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
+              "threats": [
+                {
+                  "id": "6c5bb641-57e5-41d0-814f-c9dc1e49073d",
+                  "title": "Ataque Man in the middle",
+                  "status": "Mitigated",
+                  "severity": "Low",
+                  "type": "Information disclosure / Brecha de información",
+                  "description": "Un atacante podría interceptar\nlas consultas de la base de\ndatos en tránsito y obtener\ninformación confidencial,\ncomo credenciales de la base\nde datos, parámetros de\nconsulta o resultados de la\nconsulta (es poco probable ya\nque el flujo de datos se\nrealiza a través de una red\nprivada).",
+                  "mitigation": "Aplicar una conexión\ncifrada en el servidor de\nbase de datos.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 8,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
             },
             "labels": [
               "Resultados\nWeb App Query"
@@ -713,62 +788,6 @@
               {
                 "x": 440,
                 "y": 220
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": "4 3"
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Páginas",
-              "description": "Páginas web leídas desde el disco.",
-              "outOfScope": true,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
-            },
-            "labels": [
-              "Páginas"
-            ],
-            "id": "9a5e69b1-6b2e-4289-8605-83dae14bf30d",
-            "source": {
-              "cell": "351b30a2-e9dd-49e2-80d9-9486a754711c",
-              "port": "043327e6-4388-4c12-b094-0155639d7b18"
-            },
-            "target": {
-              "cell": "b9c1b9b0-c699-4e1e-b942-e9ff38bb2934",
-              "port": "ea7220b4-3336-456b-a20a-680c98dd005d"
-            },
-            "vertices": [
-              {
-                "x": 330,
-                "y": 420
-              },
-              {
-                "x": 350,
-                "y": 390
               }
             ]
           },
@@ -1142,6 +1161,13 @@
               "storesCredentials": false,
               "storesInventory": false,
               "threats": []
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -2468,6 +2494,6 @@
     ],
     "diagramTop": 2,
     "reviewer": "Guillermo Humberto Vera Amaro",
-    "threatTop": 7
+    "threatTop": 8
   }
 }
