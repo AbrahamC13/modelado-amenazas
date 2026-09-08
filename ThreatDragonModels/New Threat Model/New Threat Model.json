@@ -1577,8 +1577,8 @@
                 "text": "Usuarios"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1671,13 +1671,38 @@
             "data": {
               "type": "tm.Actor",
               "name": "Usuarios",
-              "description": "",
+              "description": "(1) Usuario web anónimo.\n(2) Usuario con credenciales de inicio\nde sesión válidas.\n(3) Usuario con credenciales de inicio\nde sesión no válidas.",
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "1ca3d7ed-efb7-434a-8bee-770e0ef2c8f7",
+                  "title": "(1) Usuario web anónimo. (2) Usuario con credenciales de inicio de sesión válidas. (3) Usuario con credenciales de inicio de sesión no válidas.",
+                  "status": "Open",
+                  "severity": "Low",
+                  "type": "Spoofing / Spoofing",
+                  "description": "Acción de amenaza\ndestinada a acceder y\nutilizar las credenciales de\notro usuario, como el\nnombre de usuario y la\ncontraseña",
+                  "mitigation": "1. Autenticación\nadecuada\n2. Proteger datos\nsecretos\n3. No almacenar\nsecretos",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 15,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "repudiation": 0
+              }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -2597,6 +2622,6 @@
     ],
     "diagramTop": 2,
     "reviewer": "Guillermo Humberto Vera Amaro",
-    "threatTop": 14
+    "threatTop": 15
   }
 }
