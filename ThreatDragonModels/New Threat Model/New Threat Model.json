@@ -1248,7 +1248,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Boundary",
-              "name": "Trust Boundary",
+              "name": "Usuario/Web\nServer límite",
               "description": "",
               "isTrustBoundary": true,
               "hasOpenThreats": false,
@@ -1256,7 +1256,7 @@
               "containedElements": []
             },
             "labels": [
-              "Trust Boundary"
+              "Usuario/Web\nServer límite"
             ],
             "id": "b6a99c6d-8e75-4a2d-b4b3-9b5be3c4240e",
             "source": {
@@ -1299,6 +1299,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 1,
             "ports": {
               "groups": {
                 "top": {
@@ -1382,7 +1383,6 @@
               ]
             },
             "id": "92d04e50-daf1-4d9d-8c88-964e98c2210d",
-            "zIndex": 1,
             "data": {
               "type": "tm.Actor",
               "name": "Usuarios",
@@ -1419,6 +1419,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 2,
             "ports": {
               "groups": {
                 "top": {
@@ -1502,7 +1503,6 @@
               ]
             },
             "id": "b794fc6a-e27f-46b2-b079-fa99e65d1f3e",
-            "zIndex": 2,
             "data": {
               "type": "tm.Store",
               "name": "Páginas web\nen disco",
@@ -1543,6 +1543,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 3,
             "ports": {
               "groups": {
                 "top": {
@@ -1626,7 +1627,6 @@
               ]
             },
             "id": "0859e103-ad74-4169-b392-cf57ee779f88",
-            "zIndex": 3,
             "data": {
               "type": "tm.Store",
               "name": "Base de datos",
@@ -1664,6 +1664,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 4,
             "ports": {
               "groups": {
                 "top": {
@@ -1747,7 +1748,6 @@
               ]
             },
             "id": "0edfed16-f3de-491d-84de-611f5187a8da",
-            "zIndex": 4,
             "data": {
               "type": "tm.Process",
               "name": "Controlador web",
@@ -1784,6 +1784,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 5,
             "ports": {
               "groups": {
                 "top": {
@@ -1867,7 +1868,6 @@
               ]
             },
             "id": "eec9a805-21bf-4a8a-b79f-a6b8576a4a5c",
-            "zIndex": 5,
             "data": {
               "type": "tm.Process",
               "name": "Proceso \nde login",
