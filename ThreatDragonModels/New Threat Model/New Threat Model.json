@@ -1283,6 +1283,99 @@
             ]
           },
           {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": -1,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Límite\nWeb server/Db",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false,
+              "crossingFlows": [
+                "db922ac7-29f1-4394-a4da-a2f2766dc609",
+                "807caff7-e432-4c4c-9607-5425572e87dd"
+              ],
+              "containedElements": [
+                "0859e103-ad74-4169-b392-cf57ee779f88"
+              ]
+            },
+            "labels": [
+              "Límite\nWeb server/Db"
+            ],
+            "id": "8d4cde2f-1ed9-4996-a1cd-9c64e5bf59ca",
+            "source": {
+              "x": 1320,
+              "y": 410
+            },
+            "target": {
+              "x": 1047,
+              "y": 465
+            },
+            "vertices": [
+              {
+                "x": 1290,
+                "y": 310
+              },
+              {
+                "x": 1110,
+                "y": 340
+              }
+            ],
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead"
+              ],
+              "name": null
+            }
+          },
+          {
             "position": {
               "x": 110,
               "y": 115.00000000000017
@@ -2198,7 +2291,9 @@
               "isPublicNetwork": false,
               "protocol": "",
               "threats": [],
-              "trustBoundaryIds": []
+              "trustBoundaryIds": [
+                "8d4cde2f-1ed9-4996-a1cd-9c64e5bf59ca"
+              ]
             },
             "labels": [
               "UsuarioAutenticado\nSQL Query Resultado"
@@ -2250,7 +2345,9 @@
               "isPublicNetwork": false,
               "protocol": "",
               "threats": [],
-              "trustBoundaryIds": []
+              "trustBoundaryIds": [
+                "8d4cde2f-1ed9-4996-a1cd-9c64e5bf59ca"
+              ]
             },
             "labels": [
               "UsuarioAutenticado\nSQL Query"
