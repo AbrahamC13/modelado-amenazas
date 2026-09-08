@@ -1978,17 +1978,32 @@
                   "new": false,
                   "number": 25,
                   "score": ""
+                },
+                {
+                  "id": "75521277-4b1a-43be-a1df-e3923a3bee3a",
+                  "title": "Robo de credenciales",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": " Un atacante podría obtener\nlas credenciales de la base\nde datos y utilizarlas para\nrealizar consultas no\nautorizadas.",
+                  "mitigation": "Utilice un firewall para\nrestringir el acceso a la\nbase de datos\núnicamente a la\ndirección IP del\ntrabajador en segundo\nplano",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 26,
+                  "score": ""
                 }
               ],
               "threatFrequency": {
                 "tampering": 1,
                 "repudiation": 0,
-                "informationDisclosure": 0,
+                "informationDisclosure": 1,
                 "denialOfService": 0
               }
             },
             "tools": {
               "items": [
+                "boundary",
+                "button-remove",
                 "boundary",
                 "button-remove"
               ],
@@ -2806,6 +2821,6 @@
     ],
     "diagramTop": 2,
     "reviewer": "Guillermo Humberto Vera Amaro",
-    "threatTop": 25
+    "threatTop": 26
   }
 }
