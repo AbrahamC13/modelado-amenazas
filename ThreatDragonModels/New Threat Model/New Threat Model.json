@@ -1525,8 +1525,8 @@
           },
           {
             "position": {
-              "x": 680,
-              "y": 360
+              "x": 1110,
+              "y": 380
             },
             "size": {
               "width": 150,
@@ -2164,6 +2164,58 @@
               {
                 "x": 860,
                 "y": 260
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "UsuarioAutenticado\nSQL Query Resultado",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "UsuarioAutenticado\nSQL Query Resultado"
+            ],
+            "id": "db922ac7-29f1-4394-a4da-a2f2766dc609",
+            "source": {
+              "cell": "0859e103-ad74-4169-b392-cf57ee779f88",
+              "port": "ad5dfd8f-310a-4354-99a8-7b4454a7995b"
+            },
+            "target": {
+              "cell": "eec9a805-21bf-4a8a-b79f-a6b8576a4a5c",
+              "port": "72195953-a3aa-4c5a-9946-1593fb9dd231"
+            },
+            "vertices": [
+              {
+                "x": 1130,
+                "y": 150
               }
             ]
           }
