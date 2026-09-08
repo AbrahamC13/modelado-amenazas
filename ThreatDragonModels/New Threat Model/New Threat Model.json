@@ -436,7 +436,7 @@
             "data": {
               "type": "tm.Process",
               "name": "Sitio web \nbiblioteca",
-              "description": "",
+              "description": "El sitio web de la biblioteca\nuniversitaria se ejecutará en un\nservidor Linux con Apache. Este\nservidor será reforzado según el\nestándar de protección de servidores\nde la universidad.",
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
