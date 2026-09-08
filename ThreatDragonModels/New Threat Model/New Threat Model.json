@@ -1696,13 +1696,6 @@
                 "spoofing": 2,
                 "repudiation": 0
               }
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
@@ -2235,62 +2228,6 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Web response",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
-            },
-            "labels": [
-              "Web response"
-            ],
-            "id": "b11d3fbe-04b1-47d9-841a-ceba58ffaa0e",
-            "source": {
-              "cell": "0edfed16-f3de-491d-84de-611f5187a8da",
-              "port": "42c7bb10-d509-4d0b-a867-d50f2947aa0c"
-            },
-            "target": {
-              "cell": "92d04e50-daf1-4d9d-8c88-964e98c2210d",
-              "port": "77fca2e5-23ce-43d5-910e-e37a536db5a6"
-            },
-            "vertices": [
-              {
-                "x": 500,
-                "y": 60
-              },
-              {
-                "x": 270,
-                "y": 80
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
               "name": "Web request",
               "description": "",
               "outOfScope": false,
@@ -2597,6 +2534,92 @@
             }
           },
           {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Web response",
+              "description": "Respuestas enviadas por la aplicación\nhacia los usuarios.",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "d2246399-433e-490b-9bbe-5c192d8b4297",
+                  "title": "El flujo de datos debe utilizar HTTP/S",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Estas respuestas se\ntransmiten a traves de la\nInternet pública y podrían\nser interceptadas por un\natacante.",
+                  "mitigation": "Las respuestas\ndeberian requerir\nHTTPS/S. Esto\nproporcionara\nconfidencialidad e\nintegridad. HTTP no\ndebe ser compatible.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 18,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Web response"
+            ],
+            "id": "b11d3fbe-04b1-47d9-841a-ceba58ffaa0e",
+            "source": {
+              "cell": "0edfed16-f3de-491d-84de-611f5187a8da",
+              "port": "42c7bb10-d509-4d0b-a867-d50f2947aa0c"
+            },
+            "target": {
+              "cell": "92d04e50-daf1-4d9d-8c88-964e98c2210d",
+              "port": "77fca2e5-23ce-43d5-910e-e37a536db5a6"
+            },
+            "vertices": [
+              {
+                "x": 500,
+                "y": 60
+              },
+              {
+                "x": 270,
+                "y": 80
+              }
+            ],
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead"
+              ],
+              "name": null
+            }
+          },
+          {
             "shape": "trust-boundary-curve",
             "width": 200,
             "height": 100,
@@ -2644,6 +2667,6 @@
     ],
     "diagramTop": 2,
     "reviewer": "Guillermo Humberto Vera Amaro",
-    "threatTop": 17
+    "threatTop": 18
   }
 }
