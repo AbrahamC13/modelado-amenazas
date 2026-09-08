@@ -2228,62 +2228,6 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Vistas",
-              "description": "",
-              "outOfScope": true,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
-            },
-            "labels": [
-              "Vistas"
-            ],
-            "id": "350a7a1b-2d56-406a-953d-db078a7c45ba",
-            "source": {
-              "x": 410,
-              "y": 360
-            },
-            "target": {
-              "cell": "0edfed16-f3de-491d-84de-611f5187a8da",
-              "port": "e3332455-2220-42e1-b266-4f9c3e7c3ace"
-            },
-            "vertices": [
-              {
-                "x": 450,
-                "y": 300
-              },
-              {
-                "x": 560,
-                "y": 300
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": "4 3"
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
               "name": "UsuarioAutenticado\nResultado",
               "description": "",
               "outOfScope": true,
@@ -2627,17 +2571,63 @@
                 "x": 500,
                 "y": 260
               }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": "4 3"
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Vistas",
+              "description": "Páginas web leídas desde el disco\nduro.",
+              "outOfScope": true,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Vistas"
             ],
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead"
-              ],
-              "name": null
-            }
+            "id": "350a7a1b-2d56-406a-953d-db078a7c45ba",
+            "source": {
+              "x": 410,
+              "y": 360
+            },
+            "target": {
+              "cell": "0edfed16-f3de-491d-84de-611f5187a8da",
+              "port": "e3332455-2220-42e1-b266-4f9c3e7c3ace"
+            },
+            "vertices": [
+              {
+                "x": 450,
+                "y": 300
+              },
+              {
+                "x": 560,
+                "y": 300
+              }
+            ]
           },
           {
             "shape": "trust-boundary-curve",
