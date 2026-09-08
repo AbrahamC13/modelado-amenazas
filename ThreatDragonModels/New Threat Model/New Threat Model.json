@@ -301,7 +301,7 @@
             "data": {
               "type": "tm.Actor",
               "name": "Bibliotecario",
-              "description": "",
+              "description": "(4) Bibliotecario.",
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
