@@ -165,7 +165,7 @@
             "data": {
               "type": "tm.Actor",
               "name": "Usuarios",
-              "description": "",
+              "description": " (1) Usuario web anónimo.\n(2) Usuario con credenciales de\ninicio de sesión válidas.\n(3) Usuario con credenciales de\ninicio de sesión no válidas.",
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
@@ -207,8 +207,8 @@
                 "text": "Bibliotecario"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -305,16 +305,27 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
+              "threats": [
+                {
+                  "id": "a78fb27b-6c4a-4c73-8531-29ef66d26066",
+                  "title": "Suplantación de identidad",
+                  "status": "Open",
+                  "severity": "Low",
+                  "type": "Spoofing / Spoofing",
+                  "description": "Acción de amenaza destinada\na acceder y utilizar las\ncredenciales de otro usuario,\ncomo el nombre de usuario y\nla contraseña",
+                  "mitigation": "1. Autenticación\nadecuada\n2. Proteger datos secretos\n3. No almacenar secretos",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 2,
+                  "score": ""
+                }
               ],
-              "name": null
+              "threatFrequency": {
+                "spoofing": 1,
+                "repudiation": 0
+              }
             }
           },
           {
@@ -331,8 +342,8 @@
                 "text": "Sitio web \nbiblioteca"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -429,12 +440,34 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "daff0bb3-e6ff-4c41-a587-afdb947f5deb",
+                  "title": "Denegación de servicio",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Denial of service / Denegación de servicio",
+                  "description": "Un atacante podría denegar el\nacceso a usuarios válidos,\nhaciendo que el servidor web\nno esté disponible o sea\ninutilizable temporalmente\npor medio del envío de\nmúltiples peticiones\nsimultaneas.",
+                  "mitigation": "Se utiliza un balanceo de\ncargas en el servidor web.\nSe monitorean las\ndirecciones IP de los\nclientes y al encontrar un\nposible ataque, se bloquea\nel acceso.\nSe considera contratar un\nservicio de VPN para\nocultar la dirección IP\npública a los clientes.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 3,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 1,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -1165,7 +1198,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -1186,12 +1220,26 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": [],
+              "threats": [
+                {
+                  "id": "c90f8bc2-97d0-4d90-af04-ad2c5c064a20",
+                  "title": "Nueva amenaza STRIDE",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Tampering / Manipulación",
+                  "description": "Introduzca una descripción para esta amenaza",
+                  "mitigation": "Introduzca la mitigación o prevención para esta amenaza",
+                  "modelType": "STRIDE",
+                  "new": true,
+                  "number": 4,
+                  "score": ""
+                }
+              ],
               "trustBoundaryIds": []
             },
             "labels": [
@@ -2341,6 +2389,6 @@
     ],
     "diagramTop": 2,
     "reviewer": "Guillermo Humberto Vera Amaro",
-    "threatTop": 1
+    "threatTop": 4
   }
 }
