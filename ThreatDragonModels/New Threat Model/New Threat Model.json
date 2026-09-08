@@ -27,7 +27,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Boundary",
-              "name": "Usuario Web \nserver límite",
+              "name": "Usuario/Web \nserver límite",
               "description": "",
               "isTrustBoundary": true,
               "hasOpenThreats": false,
@@ -35,7 +35,7 @@
               "containedElements": []
             },
             "labels": [
-              "Usuario Web \nserver límite"
+              "Usuario/Web \nserver límite"
             ],
             "id": "46b84883-5b25-4daa-a09f-12db929a7c8b",
             "source": {
