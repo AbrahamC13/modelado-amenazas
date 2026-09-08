@@ -1680,7 +1680,7 @@
               "threats": [
                 {
                   "id": "1ca3d7ed-efb7-434a-8bee-770e0ef2c8f7",
-                  "title": "(1) Usuario web anónimo. (2) Usuario con credenciales de inicio de sesión válidas. (3) Usuario con credenciales de inicio de sesión no válidas.",
+                  "title": "Suplantación de identidad.",
                   "status": "Open",
                   "severity": "Low",
                   "type": "Spoofing / Spoofing",
@@ -1693,7 +1693,7 @@
                 }
               ],
               "threatFrequency": {
-                "spoofing": 1,
+                "spoofing": 2,
                 "repudiation": 0
               }
             },
