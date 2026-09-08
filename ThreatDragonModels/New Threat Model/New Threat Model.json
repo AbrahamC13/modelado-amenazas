@@ -1967,8 +1967,8 @@
                 "text": "Controlador web"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -2061,16 +2061,38 @@
             "data": {
               "type": "tm.Process",
               "name": "Controlador web",
-              "description": "",
+              "description": "Controlador de entrada que recibe las\npeticiones del usuario para iniciar la\nsesión.",
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "97274c62-a7e2-4ed3-b80a-8809491a7954",
+                  "title": "Denegación de servicio.",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "description": "Un atacante podría denegar\nel acceso a usuarios válidos,\nhaciendo que el servidor\nweb no esté disponible o sea\ninutilizable temporalmente\npor medio del envío de\nmúltiples peticiones\nsimultaneas.",
+                  "mitigation": "Se utiliza un balanceo\nde cargas en el servidor\nweb.\nSe monitorean las\ndirecciones IP de los\nclientes y al encontrar\nun posible ataque, se\nbloquea el acceso.\nSe considera contratar\nun servicio de VPN\npara ocultar la\ndirección IP pública a\nlos clientes.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 17,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 1,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -2622,6 +2644,6 @@
     ],
     "diagramTop": 2,
     "reviewer": "Guillermo Humberto Vera Amaro",
-    "threatTop": 15
+    "threatTop": 17
   }
 }
