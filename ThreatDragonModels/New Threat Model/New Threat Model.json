@@ -71,8 +71,8 @@
                 "text": "Usuarios"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -169,9 +169,27 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "3f89153a-ecb8-446c-9108-5b7533c5f664",
+                  "title": "Suplantación de indentidad",
+                  "status": "Open",
+                  "severity": "Low",
+                  "type": "Spoofing / Spoofing",
+                  "description": "Acción de amenaza destinada\na acceder y utilizar las\ncredenciales de otro usuario,\ncomo el nombre de usuario y\nla contraseña",
+                  "mitigation": "1. Autenticación\nadecuada\n2. Proteger datos secretos\n3. No almacenar secretos",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 1,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "repudiation": 0
+              }
             },
             "children": []
           },
@@ -290,6 +308,13 @@
               "hasOpenThreats": false,
               "providesAuthentication": false,
               "threats": []
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -2316,6 +2341,6 @@
     ],
     "diagramTop": 2,
     "reviewer": "Guillermo Humberto Vera Amaro",
-    "threatTop": 0
+    "threatTop": 1
   }
 }
