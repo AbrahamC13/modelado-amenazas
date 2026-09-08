@@ -1856,11 +1856,13 @@
                 "text": "Base de datos"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1953,17 +1955,44 @@
             "data": {
               "type": "tm.Store",
               "name": "Base de datos",
-              "description": "",
+              "description": "El servidor de la base de datos será\nMySQL y se ejecutará en un servidor\nLinux. Este servidor será reforzado\nsegún el estándar de protección de\nservidores de la universidad. Esto\nincluirá la instalación de los últimos\nparches de seguridad del sistema\noperativo y de las aplicaciones.",
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "0c16db8b-e0cb-4545-8034-9c2923a92232",
+                  "title": "Acceso no autorizado",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Un atacante podría enviar\nuna consulta a la BD.",
+                  "mitigation": "Requerir que todas las\nconsultas sean\nautenticadas.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 25,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -2248,13 +2277,6 @@
                 "denialOfService": 0,
                 "elevationOfPrivilege": 1
               }
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
@@ -2784,6 +2806,6 @@
     ],
     "diagramTop": 2,
     "reviewer": "Guillermo Humberto Vera Amaro",
-    "threatTop": 24
+    "threatTop": 25
   }
 }
