@@ -2218,6 +2218,51 @@
                 "y": 150
               }
             ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "UsuarioAutenticado\nSQL Query",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "UsuarioAutenticado\nSQL Query"
+            ],
+            "id": "807caff7-e432-4c4c-9607-5425572e87dd",
+            "source": {
+              "cell": "eec9a805-21bf-4a8a-b79f-a6b8576a4a5c"
+            },
+            "target": {
+              "cell": "0859e103-ad74-4169-b392-cf57ee779f88",
+              "port": "259fdb77-6972-4cec-a6ed-4f659651e4ee"
+            }
           }
         ]
       }
